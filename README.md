@@ -1,2 +1,4 @@
 # ci_postgres_docker_image
-Dockerfile to build the container we use in CI with postgres server and any extensions we use
+
+This repository contains the Dockerfile to build the container we use in CI 
+with postgres server and any postgres extensions we use

@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    environment:
+      IMAGE_NAME: tici-postgres
+    steps:
+      - checkout
+      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - run: docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$CIRCLE_BRANCH .
+      - run: docker push $DOCKER_USERNAME/$IMAGE_NAME:$CIRCLE_BRANCH && sleep 10
