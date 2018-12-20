@@ -4,7 +4,7 @@ FROM postgres:10.5
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install wget
+RUN apt-get -y install wget
 
 # install postgres plv8 extension
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
